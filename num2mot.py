@@ -17,12 +17,12 @@ __license__ = 'apache'
 
 
 class num2mot:
-    """ traduir un numéro positif de l'arabe vers le français """
-    debug = False
-    numax = 1e15
+	""" traduir un numéro positif de l'arabe vers le français """
+	debug = False
+	numax = 1e15
 
-    def __init__(self, arg1=0): self.num = arg1
-    def __str__(self):
+	def __init__(self, arg1=0): self.num = arg1
+	def __str__(self):
 		strarr = self.num.split('.')
 		intarr = []
 		for arr in strarr:
