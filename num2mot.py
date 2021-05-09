@@ -43,7 +43,7 @@ class num2mot:
 	def setdebug(self, deb=True):
 		self.debug = deb
 
-	def int2mot(self, i):# whole numbers only
+	def int2mot(self, i):   # whole numbers only
 		self.mot = ''
 		while i > -1:
 			if self.mot != '':
@@ -81,7 +81,7 @@ class num2mot:
 		while (i > 0):
 			if self.debug:
 				print ('\ndebug::{0} {1}\n'.format(i, n))
-			#if not n.isspace():  attention déductive
+			# if not n.isspace():  attention déductive
 			if not n == '':
 				if not n.endswith('cent'):
 					if not n.endswith(' '):
