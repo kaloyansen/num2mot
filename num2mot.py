@@ -13,9 +13,6 @@ __url__ = 'http://www.apache.org'
 __license__ = 'apache'
 
 
-
-
-
 class num2mot:
 	""" traduir un numéro positif de l'arabe vers le français """
 	debug = False
@@ -36,9 +33,9 @@ class num2mot:
 			mot += self.int2mot(arr)
 		return mot
 
-    def setdebug(self, deb=True): self.debug = deb
-
-    def int2mot(self, i): # whole numbers only
+	def setdebug(self, deb=True): self.debug = deb
+	
+	def int2mot(self, i): # whole numbers only
 		self.mot = ''
 		while i > -1:
 			if self.mot != '': self.mot += ' '
