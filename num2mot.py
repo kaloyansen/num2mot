@@ -21,7 +21,9 @@ class num2mot:
 	debug = False
 	numax = 1e15
 
-	def __init__(self, arg1=0): self.num = '{}'.format(arg1)
+	def __init__(self, arg1=0):
+		self.num = '{}'.format(arg1)
+
 	def __str__(self):
 		strarr = self.num.split('.')
 		intarr = []
