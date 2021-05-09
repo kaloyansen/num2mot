@@ -14,6 +14,8 @@ __license__ = 'apache'
 
 
 
+
+
 class num2mot:
     """ traduir un numéro positif de l'arabe vers le français """
     debug = False
