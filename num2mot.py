@@ -80,7 +80,7 @@ class num2mot:
 
 		while (i > 0):
 			if self.debug:
-				print ('\ndebug::{0} {1}\n'.format(i, n))
+				print('\ndebug::{0} {1}\n'.format(i, n))
 			# if not n.isspace():  attention déductive
 			if not n == '':
 				if not n.endswith('cent'):
