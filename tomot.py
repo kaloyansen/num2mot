@@ -5,6 +5,7 @@
 import sys
 from num2mot import num2mot as n2m
 
+
 if len(sys.argv) < 2:
 	print('try again, at least one argument needed, a number, please')
 	exit(0)
