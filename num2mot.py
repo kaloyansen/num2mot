@@ -101,7 +101,7 @@ class num2mot:
 						n = n + m + ' cent '
 					else:
 						n = n + 'cent '
-			elif i >  80:
+			elif i > 80:
 				i, n = self.tran2(i, n, 'quatre-vingt', 80)
 			elif i == 80:
 				i, n = self.tran2(i, n, 'quatre-vingts', 80)
@@ -115,7 +115,7 @@ class num2mot:
 				i, n = self.tran2(i, n, 'trente', 30)
 			elif i >= 20:
 				i, n = self.tran2(i, n, 'vingt', 20)
-			elif i >  16:
+			elif i > 16:
 				i, n = self.tran2(i, n, 'dix', 10)
 			elif i == 16:
 				i, n = self.tran2(i, n, 'seize', 16)
