@@ -21,13 +21,15 @@ class num2mot:
 	debug = False
 	numax = 1e15
 
-	def __init__(self, arg1=0): self.num = '{}'.format(arg1)
+	def __init__(self, arg1=0):
+		self.num = '{}'.format(arg1)
 
 	def __str__(self):
 		strarr = self.num.split('.')
 		intarr = []
 		for arr in strarr:
-			if arr.isdigit(): intarr.append(int(arr))
+			if arr.isdigit():
+				intarr.append(int(arr))
 			else:
 				print('attention ' + arr + ' is not a number')
 				intarr.append(0)
@@ -37,7 +39,8 @@ class num2mot:
 			mot += self.int2mot(arr)
 		return mot
 
-	def setdebug(self, deb=True): self.debug = deb
+	def setdebug(self, deb=True):
+		self.debug = deb
 
 	def int2mot(self, i): # whole numbers only
 		self.mot = ''
@@ -58,15 +61,18 @@ class num2mot:
 
 		return self.mot.strip()
 
-	def tran2(self, i, n, t, diff): return i - diff, n + t
+	def tran2(self, i, n, t, diff):
+		return i - diff, n + t
 
 	def tran3(self, i):
-		if i > 999 or i < 0: sys.exit('ERROR {}'.format(i))
+		if i > 999 or i < 0:
+			sys.exit('ERROR {}'.format(i))
 
 		n = ''
 
 		while (i > 0):
-			if self.debug: print ('\ndebug::{0} {1}\n'.format(i, n))
+			if self.debug:
+				print ('\ndebug::{0} {1}\n'.format(i, n))
 			#if not n.isspace():  attention déductive
 			if not n == '':
 				if not n.endswith('cent'):
@@ -82,8 +88,10 @@ class num2mot:
 				i -= 1e2 * j
 				if i == 0 and j > 1: n = n + m + ' cents'
 				else:
-					if j > 1: n = n + m + ' cent '
-					else: n = n + 'cent '
+					if j > 1:
+						n = n + m + ' cent '
+					else:
+						n = n + 'cent '
 			elif i >  80: i, n = self.tran2(i, n, 'quatre-vingt', 80)
 			elif i == 80: i, n = self.tran2(i, n, 'quatre-vingts', 80)
 			elif i >= 60: i, n = self.tran2(i, n, 'soixante', 60)
