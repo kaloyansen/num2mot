@@ -35,14 +35,15 @@ class num2mot:
 				intarr.append(0)
 		mot = ''
 		for arr in intarr:
-			if mot != '': mot += ' point '
+			if mot != '':
+				mot += ' point '
 			mot += self.int2mot(arr)
 		return mot
 
 	def setdebug(self, deb=True):
 		self.debug = deb
 
-	def int2mot(self, i): # whole numbers only
+	def int2mot(self, i):# whole numbers only
 		self.mot = ''
 		while i > -1:
 			if self.mot != '':
