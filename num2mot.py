@@ -45,18 +45,25 @@ class num2mot:
 	def int2mot(self, i): # whole numbers only
 		self.mot = ''
 		while i > -1:
-			if self.mot != '': self.mot += ' '
-			if i >= self.numax: return 'un dépassement du numéro max = {} < {}'.format(self.numax, i)
-			elif i >= 1e12: i = self.tran4(i, 1e12,  'un billion',  ' billions')
-			elif i >= 1e9:  i = self.tran4(i,  1e9, 'un milliard', ' milliards')
-			elif i >= 1e6:  i = self.tran4(i,  1e6,  'un million',  ' millions')
-			elif i >= 1e3:  i = self.tran4(i,  1e3,       'mille',     ' mille')
+			if self.mot != '':
+				self.mot += ' '
+			if i >= self.numax:
+				return 'un dépassement du numéro max = {} < {}'.format(self.numax, i)
+			elif i >= 1e12:
+				i = self.tran4(i, 1e12,  'un billion',  ' billions')
+			elif i >= 1e9:
+				i = self.tran4(i,  1e9, 'un milliard', ' milliards')
+			elif i >= 1e6:
+				i = self.tran4(i,  1e6,  'un million',  ' millions')
+			elif i >= 1e3:
+				i = self.tran4(i,  1e3,       'mille',     ' mille')
 			elif i >= 1e0:
 				j = int(i / 1e0)
 				i = i - 1e0 * j
 				self.mot += self.tran3(j)
 			else:
-				if self.mot == '': self.mot = 'zéro'
+				if self.mot == '':
+					self.mot = 'zéro'
 				i -= 1
 
 		return self.mot.strip()
