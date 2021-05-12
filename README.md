@@ -1,3 +1,4 @@
 # num2mot
-traduir un numéro positif de l'arabe vers le français
-translates a number from arab to french
+## translates a number from arab to french
+### traduir un numéro positif de l'arabe vers le français
+#### превежда едно число от арабски на френски
